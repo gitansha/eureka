@@ -1,0 +1,81 @@
+@import '../../styles/variables.css';
+
+.sia-button {
+    border: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.sia-button-primary {
+    background-color: var(--sia-blue);
+    color: var(--neutral-50);
+}
+
+.sia-button-secondary {
+    background-color: var(--secondary-700);
+    color: var(--neutral-50);
+}
+
+.sia-button-tertiary {
+    color: var(--sia-blue);
+    border: 1px solid var(--sia-blue);
+}
+
+.sia-button-with-icon {
+    padding: 8px 16px 8px 8px;
+}
+
+.sia-button-without-icon {
+    padding: 8px 16px;
+}
+
+.sia-button-rounded {
+    border-radius: 100px;
+}
+
+.sia-button:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.sia-button:active {
+    font-weight: var(--semibold-font-weight);
+}
+
+.sia-button-label {
+    font-size: var(--regular-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: calc(1.5 * var(--regular-font-size));
+}
+
+.button-userIcon {
+    margin-right: 8px;
+     /* other sides handled by container */
+}
+
+.si-cross {
+    background-image: url('../assets/icons/si-home.svg');
+  
+}
+
+/*  For disabled button */
+
+.sia-button-disabled {
+    pointer-events: none;
+}
+
+.sia-button-disabled.sia-button-primary,
+.sia-button-disabled.sia-button-secondary {
+    background-color: var(--neutral-400);
+    color: var(--neutral-500);
+}
+
+.sia-button-disabled.sia-button-tertiary {
+    background-color: transparent;
+    border-color: var(--neutral-400);
+    color: var(--neutral-500);
+}
