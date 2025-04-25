@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../assets/fonts/proximanova-regular.otf') format('opentype');
+    /* src: url('../assets/fonts/proximanova-semibold.otf') format('opentype'); */
+}
+
+@font-face {
+    font-family: 'Sigvar Serial';
+    src: url('../assets/fonts/sigvar_serial-regular.otf') format('opentype');
+}
+
+:root {
+    --sia-blue: #10174A;
+    --sia-yellow: #FF9F00;
+   
+    
+
+
+    --white-bg: #FFFFFF;
+    --navbar-gradient: linear-gradient(to right, #002569 64%,#002569 64%,#356ec0 100%);
+    
+    --smaller-font-size: 8px;
+    --small-font-size: 12px;
+    --regular-font-size: 16px;
+    --large-font-size: 24px;
+    --header-font-size: 64px;
+
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-16: 16px;
+    --spacing-24: 24px;
+
+    --large-icon-size: 32px;
+    --regular-icon-size: 24px;
+    --small-icon-size: 16px;
+    --x-small-icon-size: 8px;
+
+    --regular-font-weight: 400;
+    --semibold-font-weight: 600;
+    --bold-font-weight: 700;
+
+    --table-width: 640px;
+    --tooltip-margin: var(--spacing-24);
+
+/* Primary Colors */
+--primary-900: #10174A;
+--primary-800: #1C2660;
+--primary-700: #232F6D;
+--primary-600: #2B3877;
+--primary-500: #313F80;
+--primary-400: #4E5990;
+--primary-300: #6B75A2;
+--primary-200: #949BBD;
+--primary-100: #BEC2D8;
+--primary-50: #E5E7EF;
+
+/* Secondary Colors */
+--secondary-900: #1845A2; /* Duplicate of --secondary-900 */
+--secondary-800: #1F64C1;
+--secondary-700: #2275D3;
+--secondary-600: #2687E6; /* Duplicate of --secondary-600 */
+--secondary-500: #2895F4;
+--secondary-400: #45A4F6; /* Duplicate of --secondary-400 */
+--secondary-300: #65B4F7;
+--secondary-200: #91C9FA;
+--secondary-100: #BBDEFC; /* Duplicate of --secondary-100 */
+--secondary-50: #E3F2FD;
+
+/* Neutral Colors */
+--neutral-900: #111216; /* Duplicate of --neutral-900 */
+--neutral-850: #222428;
+--neutral-800: #303136; /* Duplicate of --neutral-800 */
+--neutral-750: #3E4046;
+--neutral-700: #4E4F54; /* Duplicate of --neutral-700 */
+--neutral-600: #616267; /* Duplicate of --neutral-600 */
+--neutral-500: #88898F; /* Duplicate of --neutral-500 */
+--neutral-400: #A9AAB0; /* Duplicate of --neutral-400 */
+--neutral-300: #CECFD5; /* Duplicate of --neutral-300 */
+--neutral-200: #E0E2E8;
+--neutral-100: #ECEEF4; /* Duplicate of --neutral-100 */
+--neutral-50: #F6F7FD; /* Duplicate of --neutral-50 */
+--neutral-0: #FFFFFF; /* Duplicate of --white-bg */
+
+/* Success Colors */
+--success-900: #006300;
+--success-800: #008200;
+--success-700: #009300; /* Duplicate of --success-700 */
+--success-600: #1CA513;
+--success-500: #29B41E;
+--success-400: #52C048;
+--success-300: #75CB6B;
+--success-200: #9ED997;
+--success-100: #C5E8C0; /* Duplicate of --success-100 */
+--success-50: #E7F6E5;
+
+/* Error Colors */
+--error-900: #C50000;
+--error-800: #D31B13;
+--error-700: #E0251B; /* Duplicate of --error-700 */
+--error-600: #F23121;
+--error-500: #FF3D1F;
+--error-400: #FC4F41;
+--error-300: #F27069; /* Duplicate of --error-300 */
+--error-200: #F99994;
+--error-100: #FFCCCF; /* Duplicate of --error-100 */
+--error-50: #FFEBED;
+
+/* Accent Colors */
+/* Yellow Accent */
+--yaccent-900: #FF6C03;
+--yaccent-800: #FF8C01;
+--yaccent-700: #FF9F00; /* Duplicate of --sia-yellow */
+--yaccent-600: #FFB000;
+--yaccent-500: #FFBE03;
+--yaccent-400: #FFC826;
+--yaccent-300: #FFD34E; /* Duplicate of --warning-300 */
+--yaccent-200: #FFDE81;
+--yaccent-100: #FFEBB2; /* Duplicate of --warning-100 */
+--yaccent-50: #FFF8E1;
+
+/* Gold Accent */
+--gaccent-900: #A05E2A;
+--gaccent-800: #AE702E;
+--gaccent-700: #B67C33;
+--gaccent-600: #BD8839;
+--gaccent-500: #C1913E;
+--gaccent-400: #C9A04C;
+--gaccent-300: #D0AF65;
+--gaccent-200: #DCC58E;
+--gaccent-100: #E9DCBA;
+--gaccent-50: #F6F1E4;
+}
+
+body {
+    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
