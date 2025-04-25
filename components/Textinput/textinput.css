@@ -1,0 +1,210 @@
+@import '../../styles/variables.css';
+
+.sia-textinput {
+    width: 100%;
+}
+
+.sia-textinput-filled, 
+.sia-textinput-lined, 
+.sia-textinput-outlined  {
+    display: inline-grid;
+    grid-template-columns: 0fr auto 0fr;
+    height: 56px;
+    align-items: center;
+    width: 100%;
+}
+
+.sia-textinput-outlined {
+    border: 0.5px solid var(--neutral-600);
+    transition: border-color 0.2s;
+}
+
+.sia-textinput-lined {
+    border-bottom: 0.5px solid var(--neutral-600);
+    transition: border-color 0.2s;
+}
+
+.sia-textinput-filled {
+    background-color: var(--neutral-100);
+}
+
+.sia-textinput-outlined:focus-within,
+.sia-textinput-lined:focus-within {
+    border-color: var(--sia-blue);
+}
+
+.sia-textinput-outlined:hover,
+.sia-textinput-filled:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.sia-textinput-filled.sia-textinput-error-class,
+.sia-textinput-inverted-class.sia-textinput-filled.sia-textinput-error-class {
+    background-color: var(--error-100);
+}
+
+.sia-textinput-error-class,
+.sia-textinput-error-class:focus-within {
+    border-color: var(--error-700);
+}
+
+.sia-textinput-error-class ~ .sia-textinput-text-below {
+    color: var(--error-700);
+}
+
+.sia-textinput-disabled-class {
+    pointer-events: none;
+}
+
+.sia-textinput-disabled-class.sia-textinput-filled {
+    background: var(--neutral-300);
+}
+
+.sia-textinput-disabled-class ~ .sia-textinput-text-below,
+.sia-textinput-disabled-class .sia-textinput-label {
+    color: var(--neutral-500);
+}
+
+.sia-textinput-text-below {
+    font-weight: var(--regular-font-weight);
+    font-size: var(--small-font-size);
+    color: var(--neutral-700);
+    line-height: calc(1.5*var(--small-font-size));
+}
+
+.sia-textinput-user-icon {
+    margin-left: 16px;
+}
+
+.sia-textinput-cross-icon {
+    margin-right: 16px;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.sia-textinput-input-wrapper {
+    position: relative;
+    padding: 16px 0 0;
+    margin: 0 16px;
+}
+
+.sia-textinput-input::placeholder {
+    color: transparent;
+}
+
+.sia-textinput-input {
+    all: unset;
+}
+
+.sia-textinput-input:placeholder-shown ~ .sia-textinput-label {
+    font-size: var(--regular-font-size);
+    cursor: text;
+    top: 8px;
+}
+
+.sia-textinput-label,
+.sia-textinput-input:focus ~ .sia-textinput-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: var(--small-font-size);
+    line-height: calc(1.5 * var(--small-font-size));
+}
+
+.sia-textinput-label {
+    color: var(--neutral-600);
+}
+
+.sia-textinput-input:focus ~ .sia-textinput-label {
+    color: var(--sia-blue);
+}
+
+.sia-textinput-input {
+    color: var(--neutral-700);
+}
+
+.sia-textinput-input:focus {
+    color: var(--neutral-900);
+}
+
+.sia-textinput-input-wrapper input[type=text] {
+    width: 100%;
+}
+
+.sia-textinput-error-class > .sia-textinput-input-wrapper > .sia-textinput-input ~ .sia-textinput-label {
+    color: var(--error-700);
+}
+
+.sia-textinput-inverted-class.sia-textinput-outlined {
+    border: 0.5px solid var(--neutral-100);
+    transition: border-color 0.2s;
+}
+
+.sia-textinput-inverted-class.sia-textinput-lined {
+    border-bottom: 0.5px solid var(--neutral-100);
+    transition: border-color 0.2s;
+}
+
+.sia-textinput-inverted-class.sia-textinput-filled {
+    background-color: var(--neutral-800);
+}
+
+.sia-textinput-inverted-class.sia-textinput-outlined:focus-within,
+.sia-textinput-inverted-class.sia-textinput-lined:focus-within {
+    border-color: var(--secondary-100);
+}
+
+.sia-textinput-inverted-class .sia-textinput-label {
+    color: var(--neutral-500);
+}
+
+.sia-textinput-inverted-class.sia-textinput-disabled-class.sia-textinput-filled {
+    background: var(--neutral-700);
+}
+
+.sia-textinput-inverted-class.sia-textinput-disabled-class ~ .sia-textinput-text-below,
+.sia-textinput-inverted-class.sia-textinput-disabled-class .sia-textinput-label,
+.sia-textinput-inverted-class.sia-textinput-disabled-class input[type=text] {
+    color: var(--neutral-500);
+}
+
+.sia-textinput-disabled-class.sia-textinput-outlined,
+.sia-textinput-disabled-class.sia-textinput-lined {
+    border-color: var(--neutral-500);
+}
+
+.sia-textinput-inverted-class.sia-textinput-error-class,
+.sia-textinput-inverted-class.sia-textinput-error-class:focus-within {
+    border-color: var(--error-300);
+}
+
+.sia-textinput-inverted-class.sia-textinput-error-class ~ .sia-textinput-text-below {
+    color: var(--error-300);
+}
+
+.sia-textinput-inverted-class .sia-textinput-input:focus ~ .sia-textinput-label {
+    color: var(--secondary-100);
+}
+
+.sia-textinput-inverted-class.sia-textinput-error-class .sia-textinput-input ~ .sia-textinput-label {
+    color: var(--error-300);
+}
+
+.sia-textinput-inverted-class .sia-textinput-input:focus {
+    color: var(--neutral-100);
+}
+
+.sia-textinput-inverted-class .sia-textinput-input,
+.sia-textinput-inverted-class ~ .sia-textinput-text-below {
+    color: var(--neutral-400);
+}
+
+.sia-textinput-disabled-class .sia-textinput-input-wrapper input[type=text] {
+    color: var(--neutral-500);
+}
+
+.sia-textinput-message {
+    line-height: calc(1.5 * var(--regular-font-size));
+}

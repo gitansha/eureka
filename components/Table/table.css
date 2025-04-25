@@ -1,0 +1,156 @@
+@import '../../styles/variables.css';
+
+.sia-table-with-pagination {
+    display: grid;
+}
+
+.sia-table-pagination {
+    justify-self: end;
+}
+
+.sia-table {
+    /* width: var(--table-width); */
+    display: grid;
+    margin-top: 16px; /* separation from search bar*/
+}
+
+.sia-table-search {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 16px;
+}
+
+.header-row, .data-row {
+    font-size: var( --regular-font-size);
+    line-height: calc(1.5*var(--regular-font-size));
+    font-weight: var(--regular-font-weight);
+    padding: 8px 12px; /* since the cells are side to side, the space between them becomes 12 + 12 = 24px*/
+}
+.header-row {
+    color: var(--neutral-50);
+    background-color: var(--sia-blue);
+}
+
+.header-row.header-with-icon {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.data-row {
+    background-color: transparent;
+}
+
+.sia-table-lined .data-row {
+    /* changed from 1px neutral-200 */
+    box-sizing: border-box;
+    border: 0.5px solid var(--neutral-300);
+}
+
+.sia-table.table-unlined {
+    box-sizing: border-box;
+    border: 0.5px solid var(--neutral-300);
+}
+
+/*  big table header rows */
+.sia-table-inverted .header-row {
+    /* background-color: var(--secondary-100); */
+    color: var(--neutral-50)
+}
+
+.sia-table-inverted .data-row {
+    background-color: var(--neutral-900);
+    color: var(--neutral-100);
+    border-color: var(--neutral-700);
+}
+
+.sia-table-search {
+    color: var(--neutral-800);
+}
+
+.sia-table-inverted .sia-table-search {
+    color: var(--neutral-100)
+}
+
+.sia-table-search-and-rows {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    column-gap: 24px;   
+}
+
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    .sia-table-lined .each-sia-table,
+    .sia-table-unlined .each-sia-table {
+        box-sizing: border-box;
+        border: 1px solid var(--neutral-200);
+    }
+    .sia-table-inverted .sia-table-lined .each-sia-table,
+    .sia-table-inverted .sia-table-unlined .each-sia-table {
+        border: 1px solid var(--neutral-700)
+    }
+
+    /* add border to the bottom of each small table */
+    .sia-table-alt .each-sia-table {
+        box-sizing: border-box;
+        border-bottom: 1px solid var(--neutral-300);
+    }
+    .sia-table-key {
+        color: var(--sia-blue);
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: start;
+        column-gap: 16px;
+    }
+    .sia-small-table {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 16px;          /* check margin between tables */
+    }
+    .data-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .sia-table-lined .sia-table-cell,
+    .sia-table-two-columns .sia-table-cell {
+        box-sizing: border-box;
+        border: 1px solid var(--neutral-200);  
+    }
+    /* small table key */
+    .sia-table-inverted .sia-table-key {
+        color: var(--secondary-100);
+    }
+
+    .sia-small-table-sort {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        column-gap: 16px;
+    }
+    .each-sia-table .data-row {
+        padding: 8px 16px;
+    }
+}
+
+.sia-table-alt-even {
+    background-color: var(--neutral-50);
+}
+.sia-table-alt-odd {
+    background-color: var(--neutral-100);
+}
+
+.sia-table-inverted .sia-table-alt-even {
+    background-color: var(--neutral-900);
+}
+.sia-table-inverted .sia-table-alt-odd {
+    background-color: var(--neutral-800);
+}
+
+.sia-table-alt-even,
+.sia-table-alt-odd {
+    box-shadow: 0px -1px 0px 0px var(--neutral-300);
+}

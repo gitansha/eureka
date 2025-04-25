@@ -1,0 +1,73 @@
+@import '../../styles/variables.css';
+
+.sia-chip {
+  display: grid;
+  /* grid-template-columns: repeat(autofit, minmax(fit-content, 1fr)); */
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: fit-content;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.sia-chip-indicator {
+  width: var(--x-small-icon-size);
+  height: var(--x-small-icon-size);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.sia-chip-message {
+  font-size: var(--regular-font-size);
+  line-height: calc(1.5 * var(--regular-font-size)); /* Fixed typo */
+}
+
+/* Not started */
+.sia-chip-not-started {
+  background-color: var(--neutral-300);
+  color: var(--neutral-600);
+}
+
+.sia-chip-not-started .sia-chip-indicator {
+  background-color: var(--neutral-600);
+}
+
+/* Success */
+.sia-chip-success {
+  background-color: var(--success-100);
+  color: var(--success-700);
+}
+
+.sia-chip-success .sia-chip-indicator {
+  background-color: var(--success-700);
+}
+
+/* Warning */
+.sia-chip-warning {
+  background-color: var(--warning-100);
+  color: var(--sia-yellow);
+}
+
+.sia-chip-warning .sia-chip-indicator {
+  background-color: var(--sia-yellow);
+}
+
+/* Error */
+.sia-chip-error {
+  background-color: var(--error-100);
+  color: var(--error-700);
+}
+
+.sia-chip-error .sia-chip-indicator {
+  background-color: var(--error-700);
+}
+
+/* Active */
+.sia-chip-active {
+  background-color: var(--secondary-100);
+  color: var(--secondary-900);
+}
+
+.sia-chip-active .sia-chip-indicator {
+  background-color: var(--secondary-900);
+}
