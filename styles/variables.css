@@ -13,7 +13,6 @@
     --sia-blue: #10174A;
     --sia-yellow: #FF9F00;
    
-    
 
 
     --white-bg: #FFFFFF;
@@ -117,6 +116,11 @@
 --yaccent-200: #FFDE81;
 --yaccent-100: #FFEBB2; /* Duplicate of --warning-100 */
 --yaccent-50: #FFF8E1;
+
+/* Warning */
+--warning-100: #FFEBB2;
+--warning-300: #FFD34E;
+--warning-500: #FFBE03;
 
 /* Gold Accent */
 --gaccent-900: #A05E2A;

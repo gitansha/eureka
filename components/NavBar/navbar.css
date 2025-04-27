@@ -1,0 +1,160 @@
+@import '../../styles/variables.css';
+
+.sia-navbar {
+    display: grid;
+    grid-template-columns: 0fr auto;
+    grid-column-gap: 2%;
+    /* grid-column-gap: 68px;  */
+    /* space between end of logo and start of navbar items */
+    align-items: center;
+}
+
+.sia-navbar-primary {
+    background-color: var(--sia-blue);
+    color: var(--neutral-50);
+}
+
+.sia-navbar-secondary {
+    background: var(--navbar-gradient);
+    color: var(--neutral-50);
+}
+
+.sia-navbar-tertiary {
+    background-color: var(--neutral-50);
+    color: var(--sia-blue);
+}
+
+.sia-navbar-items {
+    font-size: var(--regular-font-size);
+    line-height: calc(1.5*var(--regular-font-size));
+    display: grid;
+    grid-column-gap: 24px;
+    align-items: center;
+    justify-content: start;
+}
+
+/* navbar excluding the logo */
+.sia-navbar-right {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.sia-navbar-hamburger-icon {
+    width: var(--regular-icon-size);
+    height: var(--regular-icon-size);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.sia-navbar-hamburger-line {
+    width: 24px;
+    height: 2px;
+    background-color: var(--neutral-300);
+    /* margin: 2px 0; */
+}
+
+.sia-navbar-tertiary .sia-navbar-hamburger-line {
+    background-color: var(--sia-blue);
+}
+
+.sia-navbar-textinput {
+    margin: 8px 0;
+    /* max-width: 300px; */
+}
+
+.sia-navbar-icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .sia-navbar {
+        padding-left: 24px;
+    }
+    .sia-navbar-hamburger-menu {
+        justify-content: end;
+        display: grid;
+        height: 100%;
+        position: relative;
+        /* width: 100%; */
+        /* need to remove grid column gap from sia-navbar */
+    }
+    .sia-navbar-hamburger-items {
+        background-color: var(--neutral-50);
+        border: 1px solid var(--neutral-500);
+        /* height: 100%; */
+        width: 70%; /* looks weird when very shrunk if width is small */ 
+        position: absolute;
+        justify-self: end;
+        padding: 16px;
+        padding-top: 48px;
+        row-gap: 16px;
+    }
+
+    .sia-navbar-hamburger-icon:hover,
+    .sia-navbar-cross-icon:hover {
+        cursor: pointer;
+    }
+
+    .sia-navbar-hamburger-icon,
+    .sia-navbar-cross-icon {
+        padding-right: 24px;
+        align-self: center;
+    }
+
+    .sia-navbar-hamburger-icon {
+        color: var(--neutral-300);
+        row-gap: 0;
+    }
+
+    .sia-navbar-cross-icon {
+        color: var(--sia-blue);
+        z-index: 100; /* bring cross icon to front of menu */
+    }
+
+    .sia-navbar-items {
+        color: #000000;
+        row-gap: 16px;
+    }
+
+    .sia-navbar-icons {
+        justify-self: end;
+    }
+
+    .textinput-and-button {
+        display: grid;
+        row-gap: 16px
+    }
+
+    .sia-navbar-btn {
+        justify-self: end;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sia-navbar {
+        padding: 0 24px;
+        /* CHANGE HERE FOR GRID */
+        /* width: 1392px; */
+        /* 1440 - 2*24 (where 24 is the padding)*/
+    }
+
+    .textinput-and-button {
+        display: grid;
+        grid-template-columns: 1fr 0fr;
+        align-items: center;
+        margin-left: 24px;
+        justify-self: end;
+    }
+    .sia-navbar-btn {
+        margin-left: 8px;
+    }
+
+    .sia-navbar-icons {
+        margin-left: 8px;
+        justify-content: end;
+    }
+    
+}
